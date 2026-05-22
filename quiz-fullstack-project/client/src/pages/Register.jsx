@@ -19,7 +19,7 @@ function Register() {
 
       await axios.post(
 
-        "http://localhost:5001/api/auth/register",
+        "https://quiz-backend-ye6t.onrender.com/api/auth/register",
 
         {
           username,

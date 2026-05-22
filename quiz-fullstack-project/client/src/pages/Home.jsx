@@ -33,7 +33,7 @@ function Home() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5001/api/quiz"
+        "https://quiz-backend-ye6t.onrender.com/api/quiz"
       );
 
       setQuizzes(response.data);
@@ -103,7 +103,7 @@ function Home() {
 
         await axios.put(
 
-          `http://localhost:5001/api/quiz/${editingQuizId}`,
+          `https://quiz-backend-ye6t.onrender.com/api/quiz/${editingQuizId}`,
 
           {
             title,
@@ -116,7 +116,7 @@ function Home() {
       } else {
 
         await axios.post(
-          "http://localhost:5001/api/quiz/create",
+          "https://quiz-backend-ye6t.onrender.com/api/quiz/create",
           {
             title,
             questions
@@ -153,7 +153,7 @@ function Home() {
     try {
 
       await axios.delete(
-        `http://localhost:5001/api/quiz/${id}`
+        `https://quiz-backend-ye6t.onrender.com/api/quiz/${id}`
       );
 
       alert("Quiz Deleted");

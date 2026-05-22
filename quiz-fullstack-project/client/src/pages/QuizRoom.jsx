@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5001");
+const socket = io("https://quiz-backend-ye6t.onrender.com");
 
 function QuizRoom() {
 
@@ -162,7 +162,7 @@ function QuizRoom() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5001/api/quiz"
+        "https://quiz-backend-ye6t.onrender.com/api/quiz"
       );
 
       const foundQuiz = response.data.find(
@@ -252,7 +252,7 @@ function QuizRoom() {
     try {
 
       await axios.post(
-        "http://localhost:5001/api/result/save",
+        "https://quiz-backend-ye6t.onrender.com/api/result/save",
         {
           playerName,
           quizId: quiz._id,

@@ -30,7 +30,7 @@ function Leaderboard() {
       const response =
       await axios.get(
 
-        "http://localhost:5001/api/result/leaderboard"
+        "https://quiz-backend-ye6t.onrender.com/api/result/leaderboard"
       );
 
       setResults(response.data);
